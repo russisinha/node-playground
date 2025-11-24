@@ -1,4 +1,4 @@
-import { client } from './config.js';
+import { client } from '../config.js';
 
 // Insert multiple users
 const insertUsers = async (users) => {

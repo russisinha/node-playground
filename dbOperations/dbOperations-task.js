@@ -1,5 +1,5 @@
 // Write your code here
-import { client } from './config.js';
+import { client } from '../config.js';
 
 const addTask = async (title, description) => {
   const query = 'INSERT INTO tasks (title, description) VALUES ($1, $2) RETURNING *';
