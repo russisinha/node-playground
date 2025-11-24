@@ -28,10 +28,32 @@ Create required db tables
 
     node dbSetup.js
 
-#### Run Operations
-Execute CRUD operations
-<br>
+#### Start the server
 
-    node dbSetup.js
+    node server.js
 
 
+#### Run DB Operations
+Add task
+
+    curl -X POST http://localhost:3000/tasks \
+    -H "Content-Type: application/json" \
+    -d '{"title": "Complete homework", "description": "Finish math exercises"}'
+
+Get all tasks
+
+    curl -X GET http://localhost:3000/tasks
+
+Get task by id
+
+    curl -X GET http://localhost:3000/tasks/1
+
+Update task
+
+    curl -X PATCH http://localhost:3000/tasks/1 \
+    -H "Content-Type: application/json" \
+    -d '{"status": "Completed"}'
+
+Delete task
+
+    curl -X DELETE http://localhost:3000/tasks/1
