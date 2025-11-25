@@ -26,7 +26,7 @@ Create .env file and add the following values:
 Create required db tables
 <br>
 
-    node dbSetup.js
+    node dbSetup-task.js
 
 #### Start the server
 

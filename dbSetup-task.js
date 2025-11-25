@@ -1,7 +1,7 @@
-import { client } from "./config";
+import { client } from "./config.js";
 
 const setupDatabase = async () => {
-  const createUsersTableQuery = `
+  const createTasksTableQuery = `
     CREATE TABLE IF NOT EXISTS tasks (
       id SERIAL PRIMARY KEY,
       title TEXT NOT NULL,
@@ -11,8 +11,8 @@ const setupDatabase = async () => {
   `;
 
   try {
-    await client.query(createUsersTableQuery);
-    console.log('Table "users" created successfully.');
+    await client.query(createTasksTableQuery);
+    console.log('Table "tasks" created successfully.');
   } catch (err) {
     console.error('Error setting up database:', err);
   } finally {
