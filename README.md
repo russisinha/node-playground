@@ -57,3 +57,7 @@ Update task
 Delete task
 
     curl -X DELETE http://localhost:3000/tasks/1
+
+Verify data in DB
+
+    su - postgres -c "psql -d <dbName> -c 'SELECT * FROM <tableName>;'"

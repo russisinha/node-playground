@@ -2,10 +2,11 @@ import { client } from "./config";
 
 const setupDatabase = async () => {
   const createUsersTableQuery = `
-    CREATE TABLE IF NOT EXISTS users (
+    CREATE TABLE IF NOT EXISTS tasks (
       id SERIAL PRIMARY KEY,
-      name TEXT NOT NULL,
-      email TEXT NOT NULL UNIQUE
+      title TEXT NOT NULL,
+      description TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'Pending'
     );
   `;
 
