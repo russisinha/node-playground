@@ -23,8 +23,15 @@ Create .env file and add the following values:
     PASSWORD=<password> // Database password
 
 #### Setup DB
+Run PostgreSQL instance in a container (docker-compose.yml)
+
+    docker compose up -d
+
+Stop the container using
+
+    docker compose down
+
 Create required db tables
-<br>
 
     node dbSetup-task.js
 

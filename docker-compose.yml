@@ -1,0 +1,17 @@
+# version: '3.8'
+
+services:
+  db:
+    image: postgres:18-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: <db> # Postgres db name
+      POSTGRES_USER: <username> # Postgres username
+      POSTGRES_PASSWORD: <password> # Postgres password
+    ports:
+      - "5432:5432" # Maps host port 5432 to container port 5432
+    volumes:
+      - db_data:/var/lib/postgresql/data # Persists data in a named volume
+
+volumes:
+  db_data:
